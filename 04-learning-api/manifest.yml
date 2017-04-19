@@ -1,0 +1,12 @@
+---
+applications:
+- name: learning-api
+  memory: 512M
+  instances: 1
+  domain: cfapps.io
+  random-route: true
+  path: .
+  buildpack: python_buildpack
+  command: python main.py
+  services:
+   - myredis
